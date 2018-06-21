@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>MyAPI</title>
+
+    <style>
+        @font-face {
+            font-family: Vodafone;
+            src: url(/static/Vodafone.ttf);
+        }
+        @font-face {
+            font-family: VodafoneLight;
+            src: url(/static/Vodafone);
+        }
+        @font-face {
+            font-family: VodafoneBold;
+            src: url(/static/Vodafone.ttf);
+            font-weight: bolder;
+        }
+        .header {
+            font: 1em VodafoneBold;
+            color: white;
+            background-color: #e60000;
+            padding: 20px;
+            text-align: center;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .column {
+            margin: 2.5%;
+            float: left;
+            width: 45%;
+            padding: 15px;
+            height: 250px;
+        }
+        .row:after {
+            content: "";
+            clear: both;
+            height: 250px;
+        }
+        body {
+            color: white;
+            background-color: rgb(246, 246, 246);
+            font-family: 1em VodafoneLight;
+        }
+        label {
+            font: 1em VodafoneLight;
+            width: 25%;
+            display: inline-block;
+        }
+        .inputbox {
+            width: 65%;
+        }
+        .footer {
+            font-family: Vodafone;
+            color: white;
+            background-color: #e60000;
+            padding: 20px;
+            text-align: center;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            position: absolute;
+        }
+        .button {
+            background-color: #ffffff;
+            border: none;
+            padding: 5px 10px;
+            text-align: center;
+            display: inline-block;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class = "header">
+        <h1>
+            <a href = "http://www.vodafone.com/content/index.html">
+                <img src="static/vodafonelogo.png" alt="Vodafone Logo" style="float:left; width:50px; height:50px" />
+            </a>PasteBin Post API
+        </h1>
+    </div>
+
+    <h1></h1>
+
+    <div class="row">
+        <div class="column" style = "background-color: #e60000">
+
+            <form action='postitem' method='post'>
+
+                <p>
+                    <label id="texttopostlabel">Text here: </label>
+                    <input type="text" name="texttopost" value='{{texttopost}}' class='inputbox'/>
+                </p>
+
+                <p>
+                    <label id="keylabel">Key: </label>
+                    <input type="text" name="keytouse" value='{{keytopost}}' class='inputbox'/>
+                </p>
+
+
+                <br>
+
+                <input type="submit" value="submit" class='button'/>
+
+            </form>
+            
+        </div>
+
+        <div class="column" style = "background-color: #e60000">
+
+                <h3>Posted data is at: </h3>
+                <a id="info" href={{posturl}}> {{posturl}} </a>
+
+    
+            </div>
+    </div>
+    <div class = footer>
+        <footer>
+            <p> <b>To use:</b> Enter the data you want to post and your key.
+                <br> The url where the data is posted will appear.
+            </p>
+        </footer>
+    </div>
+    
+    
+</body>
+
+</html>

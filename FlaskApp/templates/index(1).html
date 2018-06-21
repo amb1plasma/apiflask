@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>MyAPI</title>
+
+    <style>
+        .header {
+            font: 1em sans-serif;
+            color: white;
+            background-color: #ff0000;
+            padding: 20px;
+            text-align: center;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .column {
+            margin: 2.5%;
+            float: left;
+            width: 45%;
+            padding: 15px;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        body {
+            color: white;
+        }
+        label {
+            width: 25%;
+            display: inline-block;
+        }
+        .inputbox {
+            width: 65%;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class = "header">
+        <h1>
+            <a href = "http://www.vodafone.com/content/index.html">
+                <img src="b1be186972d91be24ef1facc45886b36.png" alt="Vodafone Logo" style="float:left; width:50px; height:50px" />
+            </a>Vodafone Python API
+        </h1>
+    </div>
+
+    <h1></h1>
+
+    <div class="row">
+        <div class="column" style = "background-color: #ff0000">
+
+            <form action="getbookinfo" method="post" >
+
+                <p>
+                    <label id="titlelabel">Title: </label>
+                    <input type="text" id="titlebox" name="titlebox" value="#girlboss" class='inputbox'/>
+                </p>
+
+                <p>
+                    <label id="isbnlabel">ISBN: </label>
+                    <input type="text" name="isbnbox" value="1591847931" class='inputbox'/>
+                </p>
+
+                <p>
+                    <label id="listlabel">List: </label>
+                    <input type="text" name="listbox" value="" class='inputbox'/>
+                </p>
+
+                <p>
+                        <label id="keylabel">API key: </label>
+                        <input type="text" name="keybox" value="4f9e924bbe554c1095bff820dfbc0fec" class='inputbox'/>
+                </p>
+
+                <br>
+
+                <p><input type="submit" value="submit" /></p>
+
+            </form>
+            
+        </div>
+
+        <div class="column" style = "background-color: #ff0000">
+
+                <h3>Book information: </h3>
+                <p id="info">An online fashion retailer traces her path to success.</p>
+    
+            </div>
+    </div>
+    
+    
+</body>
+
+</html>
