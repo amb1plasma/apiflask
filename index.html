@@ -1,27 +1,10 @@
 <!DOCTYPE html>
 <html>
- 
-<script type = "text/javascript" src="/jquery-3.3.1.js"></script> 
 
-<script> 
-    function getinfo() {
-        //fetch("/getbookinfo").then(response => response.json()).then(console.log());
-        console.log('hi')
-       jQuery.ajax({
-       url: '/getbookinfo',
-       type: 'GET',
-       success: function (response) {
-           console.log(response);
-       },
-       error: function (error) {
-           console.log(error);
-       }
-    });
-    }
-</script>
 
 <head>
     <title>MyAPI</title>
+
     <style>
         .header {
             font: 1em sans-serif;
@@ -54,7 +37,9 @@
         .inputbox {
             width: 65%;
         }
+        
     </style>
+
 </head>
 
 
@@ -73,31 +58,31 @@
     <div class="row">
         <div class="column" style = "background-color: #ff0000">
 
-            <form>
+            <form action='getbookinfo' method='post'>
 
                 <p>
                     <label id="titlelabel">Title: </label>
-                    <input type="text" id="titlebox" value="#girlboss" class='inputbox'/>
+                    <input type="text" name="titlebox" value="#girlboss" class='inputbox'/>
                 </p>
 
                 <p>
                     <label id="isbnlabel">ISBN: </label>
-                    <input type="text" id="titlebox" value="1591847931" class='inputbox'/>
+                    <input type="text" name="isbnbox" value="1591847931" class='inputbox'/>
                 </p>
 
                 <p>
                     <label id="listlabel">List: </label>
-                    <input type="text" id="titlebox" value="" class='inputbox'/>
+                    <input type="text" name="listbox" value="" class='inputbox'/>
                 </p>
 
                 <p>
-                        <label id="keylabel">API key: </label>
-                        <input type="text" id="keybox" value="4f9e924bbe554c1095bff820dfbc0fec"  class='inputbox'/>
+                    <label id="keylabel">API key: </label>
+                    <input type="text" name="keybox" value="4f9e924bbe554c1095bff820dfbc0fec"  class='inputbox'/>
                 </p>
 
                 <br>
 
-                <button type="button" onclick="getinfo();">Get book info</button>
+                <input type="submit" value="submit"/>
 
             </form>
             
