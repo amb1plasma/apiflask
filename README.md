@@ -1,15 +1,17 @@
 # apiflask
-## main - get the py code working with the html to create a web api that can get and post
+**main** - get the py code working with the html to create a web api that can get and post
 
 
-### task1 - get
+**task1** - get
 
-### task2 - post
+**task2** - post
 
-### task3 - make html look nice w/ css
+**task3** - make html look nice w/ css
 
 
 
+
+**1**
 
 sub1.1 - get function written
 
@@ -20,6 +22,8 @@ sub1.3 - use flask to launch template from .py file
 sub1.4 - implement get on template + test
 
 
+**2**
+
 sub2.1 - write post function
 
 sub2.2 - edit html to work with post (edit layout to make room for button + text)
@@ -27,6 +31,8 @@ sub2.2 - edit html to work with post (edit layout to make room for button + text
 sub2.3 - implement post on template + test
 
 
+
+**3**
 
 sub3.1 - header + footer
 
@@ -38,19 +44,19 @@ sub3.3 - responsive layout
 
 
 
-## tasks:
+**tasks**:
 
 main = complete except sub3.3
 
 
 
 
-## Needs:
+**Needs**:
 - Flask installed
 - Requests module installed
 
 
 
-## Does:
+**Does**:
 - Gets info from telegraph web API using fields on template
 - Can post this info to pastebin.com
